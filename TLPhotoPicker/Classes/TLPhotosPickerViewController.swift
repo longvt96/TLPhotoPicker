@@ -432,12 +432,12 @@ extension TLPhotosPickerViewController {
         self.subTitleLabel.isHidden = self.configure.tapHereToChange.isEmpty
         let cancelAttributes: [NSAttributedString.Key: Any] = [.font: self.configure.cancelFont,
                                                                .foregroundColor: self.configure.cancelColor]
-        self.cancelButton.setTitleTextAttributes(cancelAttributes, for: .normal)
+        self.cancelButton.setTitleTextAttributes(cancelAttributes, for: [.normal, .highlighted, .disabled, .selected])
         self.cancelButton.title = self.configure.cancelTitle
         
         let attributes: [NSAttributedString.Key: Any] = [.font: self.configure.doneFont,
                                                          .foregroundColor: self.configure.doneColor]
-        self.doneButton.setTitleTextAttributes(attributes, for: .normal)
+        self.doneButton.setTitleTextAttributes(attributes, for: [.normal, .highlighted, .disabled, .selected])
         self.doneButton.title = self.configure.doneTitle
         self.doneButton.isEnabled = false
         self.emptyView.isHidden = true
