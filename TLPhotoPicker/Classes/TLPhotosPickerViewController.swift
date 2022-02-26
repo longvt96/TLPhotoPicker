@@ -161,7 +161,7 @@ open class TLPhotosPickerViewController: UIViewController {
     public weak var logDelegate: TLPhotosPickerLogDelegate? = nil
     open var selectedAssets = [TLPHAsset]() {
         didSet {
-            doneButton.isEnabled = !selectedAssets.isEmpty
+            doneButton?.isEnabled = !selectedAssets.isEmpty
         }
     }
     public var configure = TLPhotosPickerConfigure()
@@ -439,6 +439,7 @@ extension TLPhotosPickerViewController {
                                                          .foregroundColor: self.configure.doneColor]
         self.doneButton.setTitleTextAttributes(attributes, for: .normal)
         self.doneButton.title = self.configure.doneTitle
+        self.doneButton.isEnabled = false
         self.emptyView.isHidden = true
         self.emptyImageView.image = self.configure.emptyImage
         self.emptyMessageLabel.text = self.configure.emptyMessage
