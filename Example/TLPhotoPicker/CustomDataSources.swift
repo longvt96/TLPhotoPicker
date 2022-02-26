@@ -9,6 +9,7 @@
 import Foundation
 import Photos
 import TLPhotoPicker
+import UIKit
 
 struct CustomDataSources: TLPhotopickerDataSourcesProtocol {
     func headerReferenceSize() -> CGSize {

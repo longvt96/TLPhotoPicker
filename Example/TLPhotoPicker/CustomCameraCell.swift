@@ -10,6 +10,7 @@ import Foundation
 import TLPhotoPicker
 import AVFoundation
 import Photos
+import UIKit
 
 @available(iOS 10.2, *)
 class CustomCameraCell: TLPhotoCollectionViewCell, AVCaptureFileOutputRecordingDelegate {

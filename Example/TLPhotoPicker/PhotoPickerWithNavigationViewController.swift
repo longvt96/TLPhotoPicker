@@ -8,6 +8,7 @@
 
 import Foundation
 import TLPhotoPicker
+import UIKit
 
 class PhotoPickerWithNavigationViewController: TLPhotosPickerViewController {
     override func makeUI() {

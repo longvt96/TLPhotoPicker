@@ -8,6 +8,7 @@
 
 import Foundation
 import TLPhotoPicker
+import UIKit
 
 extension UIImage {
     public func colorMask(color:UIColor) -> UIImage {

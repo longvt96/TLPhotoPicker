@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TLPhotoPicker",
+        "repositoryURL": "https://github.com/longvt96/TLPhotoPicker",
+        "state": {
+          "branch": "master",
+          "revision": "080d5ad47a04316df2248e714d771678c72cacbf",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

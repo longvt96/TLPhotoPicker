@@ -94,6 +94,7 @@ public struct TLPhotosPickerConfigure {
     public var groupByFetch: PHFetchedResultGroupedBy? = nil
     public var supportedInterfaceOrientations: UIInterfaceOrientationMask = .portrait
     public var popup: [PopupConfigure] = []
+    public var doneFont: UIFont = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
     public init() {
         
     }
@@ -416,9 +417,10 @@ extension TLPhotosPickerViewController {
         self.titleView.addGestureRecognizer(tapGesture)
         self.titleLabel.text = self.configure.customLocalizedTitle["Camera Roll"]
         self.subTitleLabel.text = self.configure.tapHereToChange
+        self.subTitleLabel.isHidden = self.configure.tapHereToChange.isEmpty
         self.cancelButton.title = self.configure.cancelTitle
         
-        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)]
+        let attributes: [NSAttributedString.Key: Any] = [.font: self.configure.doneFont]
         self.doneButton.setTitleTextAttributes(attributes, for: .normal)
         self.doneButton.title = self.configure.doneTitle
         self.emptyView.isHidden = true
