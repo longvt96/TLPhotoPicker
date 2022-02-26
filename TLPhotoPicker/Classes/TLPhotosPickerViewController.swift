@@ -95,6 +95,12 @@ public struct TLPhotosPickerConfigure {
     public var supportedInterfaceOrientations: UIInterfaceOrientationMask = .portrait
     public var popup: [PopupConfigure] = []
     public var doneFont: UIFont = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+    public var cancelFont: UIFont = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+    public var titleFont: UIFont = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+    public var doneColor: UIColor = .systemBlue
+    public var cancelColor: UIColor = .systemBlue
+    public var titleColor: UIColor = .black
+
     public init() {
         
     }
@@ -416,11 +422,17 @@ extension TLPhotosPickerViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(titleTap))
         self.titleView.addGestureRecognizer(tapGesture)
         self.titleLabel.text = self.configure.customLocalizedTitle["Camera Roll"]
+        self.titleLabel.font = self.configure.titleFont
+        self.titleLabel.textColor = self.configure.titleColor
         self.subTitleLabel.text = self.configure.tapHereToChange
         self.subTitleLabel.isHidden = self.configure.tapHereToChange.isEmpty
+        let cancelAttributes: [NSAttributedString.Key: Any] = [.font: self.configure.cancelFont,
+                                                               .foregroundColor: self.configure.cancelColor]
+        self.cancelButton.setTitleTextAttributes(cancelAttributes, for: .normal)
         self.cancelButton.title = self.configure.cancelTitle
         
-        let attributes: [NSAttributedString.Key: Any] = [.font: self.configure.doneFont]
+        let attributes: [NSAttributedString.Key: Any] = [.font: self.configure.doneFont,
+                                                         .foregroundColor: self.configure.doneColor]
         self.doneButton.setTitleTextAttributes(attributes, for: .normal)
         self.doneButton.title = self.configure.doneTitle
         self.emptyView.isHidden = true

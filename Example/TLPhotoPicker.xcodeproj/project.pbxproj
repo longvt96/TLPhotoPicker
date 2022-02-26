@@ -29,7 +29,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		842AF10827CA28740095B588 /* TLPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 842AF10727CA28740095B588 /* TLPhotoPicker */; };
+		842AF10B27CA2B2A0095B588 /* TLPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 842AF10A27CA2B2A0095B588 /* TLPhotoPicker */; };
 		CB31335EFDE1A8586225CFE6 /* Pods_TLPhotoPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E119F9CCBD6D384998CB57 /* Pods_TLPhotoPicker_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB31335EFDE1A8586225CFE6 /* Pods_TLPhotoPicker_Example.framework in Frameworks */,
-				842AF10827CA28740095B588 /* TLPhotoPicker in Frameworks */,
+				842AF10B27CA2B2A0095B588 /* TLPhotoPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +224,7 @@
 			);
 			name = TLPhotoPicker_Example;
 			packageProductDependencies = (
-				842AF10727CA28740095B588 /* TLPhotoPicker */,
+				842AF10A27CA2B2A0095B588 /* TLPhotoPicker */,
 			);
 			productName = TLPhotoPicker;
 			productReference = 607FACD01AFB9204008FA782 /* TLPhotoPicker_Example.app */;
@@ -257,7 +257,7 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				842AF10627CA28740095B588 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */,
+				842AF10927CA2B2A0095B588 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -521,7 +521,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		842AF10627CA28740095B588 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */ = {
+		842AF10927CA2B2A0095B588 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/longvt96/TLPhotoPicker";
 			requirement = {
@@ -532,9 +532,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		842AF10727CA28740095B588 /* TLPhotoPicker */ = {
+		842AF10A27CA2B2A0095B588 /* TLPhotoPicker */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 842AF10627CA28740095B588 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */;
+			package = 842AF10927CA2B2A0095B588 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */;
 			productName = TLPhotoPicker;
 		};
 /* End XCSwiftPackageProductDependency section */
