@@ -125,7 +125,8 @@ class ViewController: UIViewController,TLPhotosPickerViewControllerDelegate {
         viewController.customDataSouces = CustomDataSources()
         var configure = TLPhotosPickerConfigure()
         configure.numberOfColumn = 3
-        configure.groupByFetch = .day
+        configure.doneColor = .red
+//        configure.groupByFetch = .day
         viewController.configure = configure
         viewController.selectedAssets = self.selectedAssets
         viewController.logDelegate = self
