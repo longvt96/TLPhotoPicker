@@ -1337,7 +1337,7 @@ extension TLPhotosPickerViewController {
                 playVideo(asset: asset, indexPath: indexPath)
             }
         }
-
+        doneButton.isEnabled = !selectedAssets.isEmpty
     }
 }
 
