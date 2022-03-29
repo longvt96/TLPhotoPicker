@@ -161,7 +161,8 @@ open class TLPhotosPickerViewController: UIViewController {
     public weak var logDelegate: TLPhotosPickerLogDelegate? = nil
     open var selectedAssets = [TLPHAsset]() {
         didSet {
-            navigationItem.rightBarButtonItem?.isEnabled = !selectedAssets.isEmpty
+            doneButton.isEnabled = !selectedAssets.isEmpty
+            doneButton.tintColor = !selectedAssets.isEmpty ? .black : .lightGray
         }
     }
     public var configure = TLPhotosPickerConfigure()
