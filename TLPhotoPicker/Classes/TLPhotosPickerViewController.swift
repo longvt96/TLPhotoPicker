@@ -161,7 +161,7 @@ open class TLPhotosPickerViewController: UIViewController {
     public weak var logDelegate: TLPhotosPickerLogDelegate? = nil
     open var selectedAssets = [TLPHAsset]() {
         didSet {
-            doneButton?.isEnabled = !selectedAssets.isEmpty
+            navigationItem.rightBarButtonItem?.isEnabled = !selectedAssets.isEmpty
         }
     }
     public var configure = TLPhotosPickerConfigure()
@@ -1337,7 +1337,6 @@ extension TLPhotosPickerViewController {
                 playVideo(asset: asset, indexPath: indexPath)
             }
         }
-        doneButton.isEnabled = !selectedAssets.isEmpty
     }
 }
 
